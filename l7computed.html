@@ -1,0 +1,27 @@
+<div id="app">
+  <button @click="doAlert()">{{counter}}</button>
+  <p v-show="isEven">Display When Counter is Even Number</p>
+</div>
+
+<script src="./libs/vue.js"></script>
+
+<script>
+  new Vue({
+      el: '#app',
+      data(){
+          return{
+              counter: 0,
+            }
+        },
+      methods: {
+          doAlert(){
+              this.counter++
+            }
+        },
+      computed: {
+          isEven(){
+              return this.counter % 2 == 0;
+            }
+        }
+    });
+</script>

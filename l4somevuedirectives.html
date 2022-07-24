@@ -1,0 +1,27 @@
+<div id="app">
+  <p v-if="fruit=='mango'">Mango</p>
+  <p v-else-if="fruit=='orange'">Orange</p>
+  <p v-else>No Fruit</p>
+  <p v-show="isShow">Show</p>
+  <p v-text="text"></p>
+  <p v-html="text"></p>
+
+  <input type="text" v-model="inputText" />
+  <p>{{inputText}}</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+
+<script>
+  new Vue({
+      el: '#app',
+      data: function(){
+          return{
+              fruit: 'mango',
+              isShow: true,
+              text: '<h1>Hello Vue</h1>',
+              inputText: 'Enter Something'
+            }
+        },
+    });
+</script>

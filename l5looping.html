@@ -1,0 +1,18 @@
+<div id="app">
+  <ul>
+    <li v-for="(f,index) in fruits" :key="index">{{f}}</li>
+  </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+
+<script>
+  new Vue({
+      el: '#app',
+      data: function(){
+          return{
+              fruits: ["apple", "mango", "orange"]
+            }
+        }
+    })
+</script>

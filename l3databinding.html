@@ -1,0 +1,29 @@
+<style>
+  .none{
+    text-decoration: none;
+    color: brown;
+  }
+</style>
+
+<div id="app">
+  <a v-bind:href="url" v-bind:class="{none:isActive}" target="_blank">Google</a>
+  <p :style="{color:color}">Style Binding</p>
+  <img :src="src" :width="width" alt="image1" />
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+
+<script>
+  new Vue({
+      el:'#app',
+      data: function(){
+          return{
+              url: 'https://google.com',
+              isActive: true,
+              color: "red",
+              src: 'https://picjumbo.com/wp-content/uploads/flying-drone-quadcopter-1080x720.jpg',
+              width: '200px'
+            };
+        }
+    });
+</script>

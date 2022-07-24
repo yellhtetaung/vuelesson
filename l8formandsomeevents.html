@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue</title>
+</head>
+<body>
+  <div id="app">
+    <!-- <button @click.once="doAlert()">Alert</button> -->
+    <!-- <input type="text" v-on:keyup.enter="doAlert()" /> -->
+    <!-- <input type="text" v-on:keyup.delete="doAlert()" /> -->
+    <!-- <input type="text" v-on:keyup.space="doAlert()" /> -->
+    <!-- <input type="text" v-on:keyup.esc="doAlert()" /> -->
+    <!-- <input type="text" v-on:keyup.up="doAlert()" /> -->
+    <!-- <input type="text" v-on:keyup.down="doAlert()" /> -->
+    <!-- <input type="text" v-on:keyup.left="doAlert()" /> -->
+    <!-- <input type="text" v-on:keyup.right="doAlert()" /> -->
+
+    <!-- <form @submit.prevent="doAlert"> -->
+    <!--   <input type="text" v-model="name" /> -->
+    <!--   {{name}} -->
+    <!--   <br/> -->
+    <!--   <button>Submit</button> -->
+    <!-- </form> -->
+
+    <!-- <input type="checkbox" value="A" v-model="char" /> -->
+    <!-- <input type="checkbox" value="B" v-model="char" /> -->
+    <!-- <input type="checkbox" value="C" v-model="char" /> -->
+    <!-- {{char}} -->
+
+    <!-- <input type="radio" value="Female" v-model="gender" /> -->
+    <!-- <input type="radio" value="Male" v-model="gender" /> -->
+    <!-- {{gender}} -->
+
+    <select v-model="select" multiple>
+      <option>A</option>
+      <option>B</option>
+      <option>C</option>
+    </select>
+    {{select}}
+
+
+  </div>
+
+
+  <script src="./libs/vue.js"></script>
+  <script>
+    new Vue({
+          el: '#app',
+          data(){
+                return{
+                      name: 'yell htet aung',
+                      char: [],
+                      gender: "Female",
+                      select: []
+                    }
+              },
+          methods: {
+                doAlert(e){
+                      console.log(e)
+                    }
+              }
+        });
+  </script>
+</body>
+</html>
